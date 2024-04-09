@@ -1,0 +1,171 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hangman {
+  position: relative;
+  width: 50vh;
+  height: 50vh;
+}
+
+.basement,
+.vertical,
+.horizontal,
+.hanging,
+.head,
+.body,
+.right-leg,
+.left-leg,
+.right-arm,
+.left-arm {
+  position: absolute;
+  background-color: antiquewhite;
+}
+
+.basement {
+  width: 25vh;
+  height: 15px;
+  bottom: 0;
+}
+
+.vertical {
+  width: 15px;
+  height: 45vh;
+  bottom: 0;
+  left: 22.5%;
+}
+
+.horizontal {
+  width: 30vh;
+  height: 15px;
+  left: 22.5%;
+  top: 7%;
+}
+
+.hanging {
+  width: 15px;
+  height: 5vh;
+  right: 17.5%;
+  top: 7%;
+}
+
+.head {
+  width: 15%;
+  height: 15%;
+  border-radius: 100%;
+  border: 15px solid antiquewhite;
+  background-color: #242424;
+  top: 16%;
+  right: 8%;
+}
+
+.body {
+  width: 15px;
+  height: 15vh;
+  top: 35%;
+  right: 17.5%;
+}
+
+.right-arm {
+  width: 15px;
+  height: 10vh;
+  top: 35%;
+  right: 25%;
+  transform: rotate(45deg);
+}
+
+.left-arm {
+  width: 15px;
+  height: 10vh;
+  top: 35%;
+  right: 10%;
+  transform: rotate(135deg);
+}
+
+.right-leg {
+  width: 15px;
+  height: 10vh;
+  top: 60%;
+  right: 25%;
+  transform: rotate(45deg);
+}
+
+.left-leg {
+  width: 15px;
+  height: 10vh;
+  top: 60%;
+  right: 10%;
+  transform: rotate(135deg);
+}
+
+.container {
+  display: grid;
+  grid-gap: 10px;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.character-block {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #242424;
+  color: antiquewhite;
+  font-size: larger;
+}
+
+.character-block:disabled {
+  color: gray;
+  background-color: gray;
+}
+
+.character-block:enabled:hover {
+  background-color: antiquewhite;
+  color: #242424;
+}
+
+.startButton {
+  width: 625px;
+  height: 40px;
+  margin-top: 1rem;
+  border: 1px solid antiquewhite;
+  background-color: #242424;
+  border-radius: 10px;
+  font-size: larger;
+}
+
+.startButton:hover {
+  border: 1px solid greenyellow;
+  color: greenyellow;
+}
+
+.word {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.blank {
+  border-bottom: 1px solid orchid;
+  width: 30px;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+}
