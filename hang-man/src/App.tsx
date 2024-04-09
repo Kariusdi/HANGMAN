@@ -46,7 +46,7 @@ function App() {
   const [checkGameStatus, setCheckGameStatus] = useState<string>("");
 
   const randomWords = useCallback(() => {
-    const words: string[] = ["fish", "water", "laptop", "building", "car"];
+    const words: string[] = ["fish", "water"];
     const Aword = words[Math.floor(Math.random() * words.length)];
     const split_word = Aword.split("");
     setWord(split_word);
@@ -67,11 +67,10 @@ function App() {
       setCheckGameStatus("lose");
     }
 
-    if (correctWord.length == word.length - 1) {
+    if (correctWord.length + 1 == word.length) {
       setCheckGameStatus("win");
     }
   };
-
   return (
     <div className="wrapper">
       <h1>
